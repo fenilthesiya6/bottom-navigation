@@ -40,7 +40,7 @@ class bottomnavigation extends StatefulWidget {
 }
 
 class _bottomnavigationState extends State<bottomnavigation> {
-  int _selectindex=0;
+  int _selectindex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -51,26 +51,26 @@ class _bottomnavigationState extends State<bottomnavigation> {
             gradient: LinearGradient(colors: [Colors.blue, Colors.red])),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            iconbottombar(
-                text: "home",
-                icon: Icons.home,
-                selected:_selectindex == 0 ,
-                onPressed: () {
-                  setState(() {
-                     _selectindex=0;
-                  });
-                }),
-            iconbottombar(
-                text: "serach",
-                icon: Icons.search_outlined,
-                selected:_selectindex == 1 ,
-                onPressed: () {
-                  setState(() {
-                     _selectindex=1;
-                  });
-                })
-          ],
+          // children: [
+          //   iconbottombar(
+          //       text: "home",
+          //       icon: Icons.home,
+          //       selected:_selectindex == 0 ,
+          //       onPressed: () {
+          //         setState(() {
+          //            _selectindex=0;
+          //         });
+          //       }),
+          // iconbottombar(
+          //     text: "serach",
+          //     icon: Icons.search_outlined,
+          //     selected:_selectindex == 1 ,
+          //     onPressed: () {
+          //       setState(() {
+          //          _selectindex=1;
+          //       });
+          //     })
+          // ],
         ),
       ),
     );
@@ -80,7 +80,7 @@ class _bottomnavigationState extends State<bottomnavigation> {
 class iconbottombar extends StatelessWidget {
   final String text;
   final IconData icon;
-   final Bool selected;
+  final Bool selected;
   final Function() onPressed;
 
   const iconbottombar(
